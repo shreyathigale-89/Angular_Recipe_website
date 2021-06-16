@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:4200/chinese -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>RecipeBook</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="./RecipeBook_files/css2" rel="stylesheet">
+  <link href="./RecipeBook_files/icon" rel="stylesheet">
+
+<link rel="stylesheet" href="./RecipeBook_files/styles.css"><style>.Header[_ngcontent-rng-c31]
+{
+   background-image: url('food7.jpg');
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+ 
+}
+
+.navbar[_ngcontent-rng-c31]
+{
+    height: 70px; 
+}
+
+.logo[_ngcontent-rng-c31]
+{
+    color: rgb(245, 8, 8);
+    font-weight: 600;
+    font-size: 40px;
+    font-family:'Abril Fatface', sans-serif;
+    margin: 0 auto;
+}
+
+.search-bar[_ngcontent-rng-c31]
+{
+    padding-top: 150px;
+}
+
+input[_ngcontent-rng-c31]{
+    padding: 20px 230px;
+    border: none;
+    background-color: white;
+    opacity: 0.9;
+    outline: none;
+}
+
+h6[_ngcontent-rng-c31]
+{
+    font-family: 'Pattaya';
+    font-size: 500;
+    font-size: 48px;
+    color: rgb(36, 34, 34);
+}
+
+h4[_ngcontent-rng-c31]{
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+    color: rgb(58, 56, 56);
+}
+
+h4[_ngcontent-rng-c31]   span[_ngcontent-rng-c31]
+{
+    color: rgb(245, 8, 8);
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+}
+
+.foodList[_ngcontent-rng-c31]
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2% 2%;
+}
+
+.food_card[_ngcontent-rng-c31]
+{
+    height: 430px;
+    transition: 0.4s all ease;
+    box-shadow: 0px 2px 2px 0px rgba(180, 174, 174, 0.6);
+    text-align: center;
+    background: #fff;
+    flex: 1 1 300px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+
+.food_card[_ngcontent-rng-c31]   img[_ngcontent-rng-c31]
+{
+    width: 100%;
+    height: 280px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.link[_ngcontent-rng-c31] 
+{
+    outline: none;
+    text-decoration: none;
+    color:rgb(230, 30, 30);
+    font-weight: 600;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.link[_ngcontent-rng-c31]:hover
+{
+    color: rgb(56, 52, 52);
+}
+
+.grid-container[_ngcontent-rng-c31] {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+.grid-item[_ngcontent-rng-c31] {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+#grid-item1[_ngcontent-rng-c31], #grid-item2[_ngcontent-rng-c31]
+  {
+      border-right:1px solid rgb(236, 217, 217);
+  }
+
+.coursole[_ngcontent-rng-c31]
+  {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      justify-content: center;  
+  }
+
+.meal[_ngcontent-rng-c31]   img[_ngcontent-rng-c31]
+  {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      box-shadow: 0px 2px 2px 0px rgba(180, 174, 174, 0.6);
+  }
+
+.meal[_ngcontent-rng-c31]
+  {
+      padding-right: 20px;
+  }
+
+.meal[_ngcontent-rng-c31]   a[_ngcontent-rng-c31]
+  {
+      color: black;
+      text-decoration: none;
+     
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHLGtDQUE0QztJQUMzQyxhQUFhO0lBQ2IsV0FBVztJQUNYLHNCQUFzQjtJQUN0Qiw0QkFBNEI7SUFDNUIsc0JBQXNCOztBQUUxQjs7QUFFQTs7SUFFSSxZQUFZO0FBQ2hCOztBQUVBOztJQUVJLHFCQUFxQjtJQUNyQixnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLHVDQUF1QztJQUN2QyxjQUFjO0FBQ2xCOztBQUVBOztJQUVJLGtCQUFrQjtBQUN0Qjs7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixZQUFZO0lBQ1osdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixhQUFhO0FBQ2pCOztBQUNBOztJQUVJLHNCQUFzQjtJQUN0QixjQUFjO0lBQ2QsZUFBZTtJQUNmLHNCQUFzQjtBQUMxQjs7QUFHQTtJQUNJLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLHNCQUFzQjtBQUMxQjs7QUFFQTs7SUFFSSxxQkFBcUI7SUFDckIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25COztBQUVBOztJQUVJLGFBQWE7SUFDYixlQUFlO0lBQ2YsWUFBWTtJQUNaLFdBQVc7SUFDWCw2QkFBNkI7SUFDN0IsY0FBYztBQUNsQjs7QUFFQTs7SUFFSSxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLG9EQUFvRDtJQUNwRCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjs7QUFFdkI7O0FBR0E7O0lBRUksV0FBVztJQUNYLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsbUJBQW1CO0FBQ3ZCOztBQUdBOztJQUVJLGFBQWE7SUFDYixxQkFBcUI7SUFDckIsc0JBQXNCO0lBQ3RCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2Ysb0JBQW9CO0FBQ3hCOztBQUVBOztJQUVJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixxQ0FBcUM7RUFDdkM7O0FBRUE7SUFDRSwwQ0FBMEM7SUFDMUMsYUFBYTtJQUNiLGVBQWU7SUFDZixrQkFBa0I7RUFDcEI7O0FBR0E7O01BRUkseUNBQXlDO0VBQzdDOztBQUVBOztNQUVJLGFBQWE7TUFDYixpQkFBaUI7TUFDakIsb0JBQW9CO01BQ3BCLHVCQUF1QjtFQUMzQjs7QUFFQTs7TUFFSSxZQUFZO01BQ1osYUFBYTtNQUNiLGtCQUFrQjtNQUNsQixtQkFBbUI7TUFDbkIsb0RBQW9EO0VBQ3hEOztBQUdBOztNQUVJLG1CQUFtQjtFQUN2Qjs7QUFFQTs7TUFFSSxZQUFZO01BQ1oscUJBQXFCOztFQUV6QiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5IZWFkZXJcclxue1xyXG4gICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvZm9vZDcuanBnXCIpO1xyXG4gICAgaGVpZ2h0OiA1NTBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gXHJcbn1cclxuXHJcbi5uYXZiYXJcclxue1xyXG4gICAgaGVpZ2h0OiA3MHB4OyBcclxufVxyXG5cclxuLmxvZ29cclxue1xyXG4gICAgY29sb3I6IHJnYigyNDUsIDgsIDgpO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogNDBweDtcclxuICAgIGZvbnQtZmFtaWx5OidBYnJpbCBGYXRmYWNlJywgc2Fucy1zZXJpZjtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG59XHJcblxyXG4uc2VhcmNoLWJhclxyXG57XHJcbiAgICBwYWRkaW5nLXRvcDogMTUwcHg7XHJcbn1cclxuaW5wdXR7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDIzMHB4O1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBvcGFjaXR5OiAwLjk7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG59XHJcbmg2XHJcbntcclxuICAgIGZvbnQtZmFtaWx5OiAnUGF0dGF5YSc7XHJcbiAgICBmb250LXNpemU6IDUwMDtcclxuICAgIGZvbnQtc2l6ZTogNDhweDtcclxuICAgIGNvbG9yOiByZ2IoMzYsIDM0LCAzNCk7XHJcbn1cclxuXHJcblxyXG5oNHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmctdG9wOiAyNnB4O1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG4gICAgY29sb3I6IHJnYig1OCwgNTYsIDU2KTtcclxufVxyXG5cclxuaDQgc3BhblxyXG57XHJcbiAgICBjb2xvcjogcmdiKDI0NSwgOCwgOCk7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXRvcDogMjZweDtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxufVxyXG5cclxuLmZvb2RMaXN0XHJcbntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG4gICAgcGFkZGluZzogMiUgMiU7XHJcbn1cclxuXHJcbi5mb29kX2NhcmRcclxue1xyXG4gICAgaGVpZ2h0OiA0MzBweDtcclxuICAgIHRyYW5zaXRpb246IDAuNHMgYWxsIGVhc2U7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDJweCAwcHggcmdiYSgxODAsIDE3NCwgMTc0LCAwLjYpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZDogI2ZmZjtcclxuICAgIGZsZXg6IDEgMSAzMDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIFxyXG59XHJcblxyXG5cclxuLmZvb2RfY2FyZCBpbWdcclxue1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDI4MHB4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG59XHJcblxyXG5cclxuLmxpbmsgXHJcbntcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjpyZ2IoMjMwLCAzMCwgMzApO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogMjVweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4ubGluazpob3ZlclxyXG57XHJcbiAgICBjb2xvcjogcmdiKDU2LCA1MiwgNTIpO1xyXG59XHJcblxyXG4uZ3JpZC1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbiAgfVxyXG5cclxuICAuZ3JpZC1pdGVtIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG5cclxuXHJcbiAgI2dyaWQtaXRlbTEsI2dyaWQtaXRlbTJcclxuICB7XHJcbiAgICAgIGJvcmRlci1yaWdodDoxcHggc29saWQgcmdiKDIzNiwgMjE3LCAyMTcpO1xyXG4gIH1cclxuXHJcbiAgLmNvdXJzb2xlXHJcbiAge1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBwYWRkaW5nLXRvcDogMzBweDtcclxuICAgICAgcGFkZGluZy1ib3R0b206IDMwcHg7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOyAgXHJcbiAgfVxyXG5cclxuICAubWVhbCBpbWdcclxuICB7XHJcbiAgICAgIHdpZHRoOiAxMDBweDtcclxuICAgICAgaGVpZ2h0OiAxMDBweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgICBib3gtc2hhZG93OiAwcHggMnB4IDJweCAwcHggcmdiYSgxODAsIDE3NCwgMTc0LCAwLjYpO1xyXG4gIH1cclxuXHJcblxyXG4gIC5tZWFsXHJcbiAge1xyXG4gICAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1lYWwgYVxyXG4gIHtcclxuICAgICAgY29sb3I6IGJsYWNrO1xyXG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgXHJcbiAgfSJdfQ== */</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>h4[_ngcontent-rng-c24]{
+    text-align: center;
+    padding-top: 26px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: rgb(58, 56, 56);
+}
+
+h4[_ngcontent-rng-c24]   span[_ngcontent-rng-c24]
+{
+    color: rgb(245, 8, 8);
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+}
+
+.foodList[_ngcontent-rng-c24]
+{
+    margin-left: 30px;
+}
+
+.food_card[_ngcontent-rng-c24]{
+    height: 200px;
+    text-align: center;
+}
+
+.food_img[_ngcontent-rng-c24]
+{
+    width:200px;
+    height: 200px;
+}
+
+.link[_ngcontent-rng-c24] 
+{
+    outline: none;
+    text-decoration: none;
+    color:rgb(145, 10, 10);
+    font-weight: 500;
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+.link[_ngcontent-rng-c24]:hover
+{
+    color: rgb(31, 29, 29);
+}
+
+#foodList[_ngcontent-rng-c24]   td[_ngcontent-rng-c24], #foodList[_ngcontent-rng-c24]   th[_ngcontent-rng-c24]{
+    padding-right: 30px;
+}
+
+#foodList[_ngcontent-rng-c24]   th[_ngcontent-rng-c24]{
+    background-color: #222;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+#foodList[_ngcontent-rng-c24]   td[_ngcontent-rng-c24]
+{
+    padding-bottom: 20px;
+}
+
+#foodList[_ngcontent-rng-c24]   td[_ngcontent-rng-c24]   li[_ngcontent-rng-c24]
+{
+    list-style-type:none;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNoaW5lc2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLG9CQUFvQjtJQUNwQixlQUFlO0lBQ2Ysc0JBQXNCO0FBQzFCOztBQUVBOztJQUVJLHFCQUFxQjtJQUNyQixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGVBQWU7QUFDbkI7O0FBRUE7O0lBRUksaUJBQWlCO0FBQ3JCOztBQUNBO0lBQ0ksYUFBYTtJQUNiLGtCQUFrQjtBQUN0Qjs7QUFFQTs7SUFFSSxXQUFXO0lBQ1gsYUFBYTtBQUNqQjs7QUFFQTs7SUFFSSxhQUFhO0lBQ2IscUJBQXFCO0lBQ3JCLHNCQUFzQjtJQUN0QixnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxzQkFBc0I7QUFDMUI7O0FBR0E7SUFDSSxtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLGVBQWU7SUFDZixXQUFXO0FBQ2Y7O0FBRUE7O0lBRUksb0JBQW9CO0FBQ3hCOztBQUVBOztJQUVJLG9CQUFvQjtBQUN4QiIsImZpbGUiOiJjaGluZXNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuaDR7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXRvcDogMjZweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG4gICAgY29sb3I6IHJnYig1OCwgNTYsIDU2KTtcclxufVxyXG5cclxuaDQgc3BhblxyXG57XHJcbiAgICBjb2xvcjogcmdiKDI0NSwgOCwgOCk7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXRvcDogMjZweDtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxufVxyXG5cclxuLmZvb2RMaXN0XHJcbntcclxuICAgIG1hcmdpbi1sZWZ0OiAzMHB4O1xyXG59XHJcbi5mb29kX2NhcmR7XHJcbiAgICBoZWlnaHQ6IDIwMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4uZm9vZF9pbWdcclxue1xyXG4gICAgd2lkdGg6MjAwcHg7XHJcbiAgICBoZWlnaHQ6IDIwMHB4O1xyXG59XHJcblxyXG4ubGluayBcclxue1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIGNvbG9yOnJnYigxNDUsIDEwLCAxMCk7XHJcbiAgICBmb250LXdlaWdodDogNTAwO1xyXG4gICAgZm9udC1zaXplOiAyNXB4O1xyXG4gICAgcGFkZGluZy1yaWdodDogMjBweDtcclxufVxyXG5cclxuLmxpbms6aG92ZXJcclxue1xyXG4gICAgY29sb3I6IHJnYigzMSwgMjksIDI5KTtcclxufVxyXG5cclxuXHJcbiNmb29kTGlzdCB0ZCwgI2Zvb2RMaXN0IHRoe1xyXG4gICAgcGFkZGluZy1yaWdodDogMzBweDtcclxufVxyXG5cclxuI2Zvb2RMaXN0IHRoe1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzIyMjtcclxuICAgIGhlaWdodDogNTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmctdG9wOiAyMHB4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIwcHg7XHJcbiAgICBmb250LXNpemU6IDE4cHg7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxuI2Zvb2RMaXN0IHRkXHJcbntcclxuICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4jZm9vZExpc3QgdGQgbGlcclxue1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOm5vbmU7XHJcbn1cclxuXHJcbiJdfQ== */</style><style>.Header[_ngcontent-rng-c25]
+{
+   background-image: url('food7.jpg');
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+ 
+}
+
+.navbar[_ngcontent-rng-c25]
+{
+    height: 70px; 
+}
+
+.logo[_ngcontent-rng-c25]
+{
+    color: rgb(245, 8, 8);
+    font-weight: 600;
+    font-size: 40px;
+    font-family:'Abril Fatface', sans-serif;
+    margin: 0 auto;
+}
+
+.search-bar[_ngcontent-rng-c25]
+{
+    padding-top: 150px;
+}
+
+input[_ngcontent-rng-c25]{
+    padding: 20px 230px;
+    border: none;
+    background-color: white;
+    opacity: 0.9;
+    outline: none;
+}
+
+h6[_ngcontent-rng-c25]
+{
+    font-family: 'Pattaya';
+    font-size: 500;
+    font-size: 48px;
+    color: rgb(36, 34, 34);
+}
+
+h4[_ngcontent-rng-c25]{
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+    color: rgb(58, 56, 56);
+}
+
+h4[_ngcontent-rng-c25]   span[_ngcontent-rng-c25]
+{
+    color: rgb(245, 8, 8);
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+}
+
+.foodList[_ngcontent-rng-c25]
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2% 2%;
+}
+
+.food_card[_ngcontent-rng-c25]
+{
+    height: 430px;
+    transition: 0.4s all ease;
+    box-shadow: 0px 2px 2px 0px rgba(180, 174, 174, 0.6);
+    text-align: center;
+    background: #fff;
+    flex: 1 1 300px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+
+.food_card[_ngcontent-rng-c25]   img[_ngcontent-rng-c25]
+{
+    width: 100%;
+    height: 280px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.link[_ngcontent-rng-c25] 
+{
+    outline: none;
+    text-decoration: none;
+    color:rgb(230, 30, 30);
+    font-weight: 600;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.link[_ngcontent-rng-c25]:hover
+{
+    color: rgb(56, 52, 52);
+}
+
+.grid-container[_ngcontent-rng-c25] {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+.grid-item[_ngcontent-rng-c25] {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+#grid-item1[_ngcontent-rng-c25], #grid-item2[_ngcontent-rng-c25]
+  {
+      border-right:1px solid rgb(236, 217, 217);
+  }
+
+.coursole[_ngcontent-rng-c25]
+  {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      justify-content: center;  
+  }
+
+.meal[_ngcontent-rng-c25]   img[_ngcontent-rng-c25]
+  {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      box-shadow: 0px 2px 2px 0px rgba(180, 174, 174, 0.6);
+  }
+
+.meal[_ngcontent-rng-c25]
+  {
+      padding-right: 20px;
+  }
+
+.meal[_ngcontent-rng-c25]   a[_ngcontent-rng-c25]
+  {
+      color: black;
+      text-decoration: none;
+     
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHLGtDQUE0QztJQUMzQyxhQUFhO0lBQ2IsV0FBVztJQUNYLHNCQUFzQjtJQUN0Qiw0QkFBNEI7SUFDNUIsc0JBQXNCOztBQUUxQjs7QUFFQTs7SUFFSSxZQUFZO0FBQ2hCOztBQUVBOztJQUVJLHFCQUFxQjtJQUNyQixnQkFBZ0I7SUFDaEIsZUFBZTtJQUNmLHVDQUF1QztJQUN2QyxjQUFjO0FBQ2xCOztBQUVBOztJQUVJLGtCQUFrQjtBQUN0Qjs7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixZQUFZO0lBQ1osdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixhQUFhO0FBQ2pCOztBQUNBOztJQUVJLHNCQUFzQjtJQUN0QixjQUFjO0lBQ2QsZUFBZTtJQUNmLHNCQUFzQjtBQUMxQjs7QUFHQTtJQUNJLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLHNCQUFzQjtBQUMxQjs7QUFFQTs7SUFFSSxxQkFBcUI7SUFDckIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25COztBQUVBOztJQUVJLGFBQWE7SUFDYixlQUFlO0lBQ2YsWUFBWTtJQUNaLFdBQVc7SUFDWCw2QkFBNkI7SUFDN0IsY0FBYztBQUNsQjs7QUFFQTs7SUFFSSxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLG9EQUFvRDtJQUNwRCxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLG1CQUFtQjs7QUFFdkI7O0FBR0E7O0lBRUksV0FBVztJQUNYLGFBQWE7SUFDYixvQkFBb0I7SUFDcEIsbUJBQW1CO0FBQ3ZCOztBQUdBOztJQUVJLGFBQWE7SUFDYixxQkFBcUI7SUFDckIsc0JBQXNCO0lBQ3RCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2Ysb0JBQW9CO0FBQ3hCOztBQUVBOztJQUVJLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixxQ0FBcUM7RUFDdkM7O0FBRUE7SUFDRSwwQ0FBMEM7SUFDMUMsYUFBYTtJQUNiLGVBQWU7SUFDZixrQkFBa0I7RUFDcEI7O0FBR0E7O01BRUkseUNBQXlDO0VBQzdDOztBQUVBOztNQUVJLGFBQWE7TUFDYixpQkFBaUI7TUFDakIsb0JBQW9CO01BQ3BCLHVCQUF1QjtFQUMzQjs7QUFFQTs7TUFFSSxZQUFZO01BQ1osYUFBYTtNQUNiLGtCQUFrQjtNQUNsQixtQkFBbUI7TUFDbkIsb0RBQW9EO0VBQ3hEOztBQUdBOztNQUVJLG1CQUFtQjtFQUN2Qjs7QUFFQTs7TUFFSSxZQUFZO01BQ1oscUJBQXFCOztFQUV6QiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5IZWFkZXJcclxue1xyXG4gICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9hc3NldHMvZm9vZDcuanBnXCIpO1xyXG4gICAgaGVpZ2h0OiA1NTBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gXHJcbn1cclxuXHJcbi5uYXZiYXJcclxue1xyXG4gICAgaGVpZ2h0OiA3MHB4OyBcclxufVxyXG5cclxuLmxvZ29cclxue1xyXG4gICAgY29sb3I6IHJnYigyNDUsIDgsIDgpO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogNDBweDtcclxuICAgIGZvbnQtZmFtaWx5OidBYnJpbCBGYXRmYWNlJywgc2Fucy1zZXJpZjtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG59XHJcblxyXG4uc2VhcmNoLWJhclxyXG57XHJcbiAgICBwYWRkaW5nLXRvcDogMTUwcHg7XHJcbn1cclxuaW5wdXR7XHJcbiAgICBwYWRkaW5nOiAyMHB4IDIzMHB4O1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBvcGFjaXR5OiAwLjk7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG59XHJcbmg2XHJcbntcclxuICAgIGZvbnQtZmFtaWx5OiAnUGF0dGF5YSc7XHJcbiAgICBmb250LXNpemU6IDUwMDtcclxuICAgIGZvbnQtc2l6ZTogNDhweDtcclxuICAgIGNvbG9yOiByZ2IoMzYsIDM0LCAzNCk7XHJcbn1cclxuXHJcblxyXG5oNHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmctdG9wOiAyNnB4O1xyXG4gICAgZm9udC1zaXplOiAzMHB4O1xyXG4gICAgY29sb3I6IHJnYig1OCwgNTYsIDU2KTtcclxufVxyXG5cclxuaDQgc3BhblxyXG57XHJcbiAgICBjb2xvcjogcmdiKDI0NSwgOCwgOCk7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXRvcDogMjZweDtcclxuICAgIGZvbnQtc2l6ZTogMzBweDtcclxufVxyXG5cclxuLmZvb2RMaXN0XHJcbntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG4gICAgcGFkZGluZzogMiUgMiU7XHJcbn1cclxuXHJcbi5mb29kX2NhcmRcclxue1xyXG4gICAgaGVpZ2h0OiA0MzBweDtcclxuICAgIHRyYW5zaXRpb246IDAuNHMgYWxsIGVhc2U7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDJweCAwcHggcmdiYSgxODAsIDE3NCwgMTc0LCAwLjYpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZDogI2ZmZjtcclxuICAgIGZsZXg6IDEgMSAzMDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIFxyXG59XHJcblxyXG5cclxuLmZvb2RfY2FyZCBpbWdcclxue1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDI4MHB4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDIwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG59XHJcblxyXG5cclxuLmxpbmsgXHJcbntcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjpyZ2IoMjMwLCAzMCwgMzApO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogMjVweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4ubGluazpob3ZlclxyXG57XHJcbiAgICBjb2xvcjogcmdiKDU2LCA1MiwgNTIpO1xyXG59XHJcblxyXG4uZ3JpZC1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbiAgfVxyXG5cclxuICAuZ3JpZC1pdGVtIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG5cclxuXHJcbiAgI2dyaWQtaXRlbTEsI2dyaWQtaXRlbTJcclxuICB7XHJcbiAgICAgIGJvcmRlci1yaWdodDoxcHggc29saWQgcmdiKDIzNiwgMjE3LCAyMTcpO1xyXG4gIH1cclxuXHJcbiAgLmNvdXJzb2xlXHJcbiAge1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBwYWRkaW5nLXRvcDogMzBweDtcclxuICAgICAgcGFkZGluZy1ib3R0b206IDMwcHg7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOyAgXHJcbiAgfVxyXG5cclxuICAubWVhbCBpbWdcclxuICB7XHJcbiAgICAgIHdpZHRoOiAxMDBweDtcclxuICAgICAgaGVpZ2h0OiAxMDBweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgICBib3gtc2hhZG93OiAwcHggMnB4IDJweCAwcHggcmdiYSgxODAsIDE3NCwgMTc0LCAwLjYpO1xyXG4gIH1cclxuXHJcblxyXG4gIC5tZWFsXHJcbiAge1xyXG4gICAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xyXG4gIH1cclxuXHJcbiAgLm1lYWwgYVxyXG4gIHtcclxuICAgICAgY29sb3I6IGJsYWNrO1xyXG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICAgXHJcbiAgfSJdfQ== */</style></head>
+<body class="mat-typography">
+  <app-root _nghost-rng-c31="" ng-version="11.2.14"><div _ngcontent-rng-c31="" class="navbar shadow-sm rounded text-center"><h5 _ngcontent-rng-c31="" class="logo">RecipeBook<mat-icon _ngcontent-rng-c31="" role="img" color="dark" class="mat-icon notranslate mat-dark material-icons mat-icon-no-color" aria-hidden="true" ng-reflect-color="dark" data-mat-icon-type="font">food_bank</mat-icon></h5></div><div _ngcontent-rng-c31="" class="Header text-center"><div _ngcontent-rng-c31="" class="search-bar"><h6 _ngcontent-rng-c31="">Find your favorite...</h6><br _ngcontent-rng-c31=""><input _ngcontent-rng-c31="" type="search"></div></div><div _ngcontent-rng-c31="" class="coursole text-center"><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/indian.jpeg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="Indian" ng-reflect-router-link="Indian" href="http://localhost:4200/Indian">Indian</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/chinese.jpg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="chinese" ng-reflect-router-link="chinese" href="http://localhost:4200/chinese">Chinese</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/dessert.png" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Dessert</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/drinks.jpg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Drinks</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/tea.jpeg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Teatime</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/soup.png" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Soup</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/salad.jpg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Salad</a></div><div _ngcontent-rng-c31="" class="meal"><img _ngcontent-rng-c31="" src="./RecipeBook_files/pancakes.jpg" alt=""><br _ngcontent-rng-c31=""><a _ngcontent-rng-c31="" routerlink="" ng-reflect-router-link="" href="http://localhost:4200/">Pancakes</a></div></div><div _ngcontent-rng-c31="" class="d-flex"><div _ngcontent-rng-c31="" id="search-comp" class="Search-comp col-md-9"><div _ngcontent-rng-c31="" id="foodList" class="foodList"><h4 _ngcontent-rng-c31=""><span _ngcontent-rng-c31=""></span> Recipe <mat-icon _ngcontent-rng-c31="" role="img" color="dark" class="mat-icon notranslate mat-dark material-icons mat-icon-no-color" aria-hidden="true" ng-reflect-color="dark" data-mat-icon-type="font">food_bank</mat-icon></h4><!--bindings={}--></div></div><div _ngcontent-rng-c31="" class="col-md-3"><h1 _ngcontent-rng-c31="">heyy</h1>
+name<input _ngcontent-rng-c31="" type="text">
+namma<input _ngcontent-rng-c31="" type="text"></div></div><router-outlet _ngcontent-rng-c31=""></router-outlet><app-chinese _nghost-rng-c24=""><div _ngcontent-rng-c24="" id="search-comp" class="Search-comp"><div _ngcontent-rng-c24="" class="foodList"><table _ngcontent-rng-c24="" id="foodList"><div _ngcontent-rng-c24="" class="col-md-12"><h4 _ngcontent-rng-c24=""><span _ngcontent-rng-c24="">Chinese</span> Recipe <mat-icon _ngcontent-rng-c24="" role="img" color="dark" class="mat-icon notranslate mat-dark material-icons mat-icon-no-color" aria-hidden="true" ng-reflect-color="dark" data-mat-icon-type="font">food_bank</mat-icon></h4><tr _ngcontent-rng-c24=""><th _ngcontent-rng-c24="">image</th><th _ngcontent-rng-c24="">Food</th><th _ngcontent-rng-c24="">Energy</th><th _ngcontent-rng-c24="">servings</th><th _ngcontent-rng-c24="">Nutrients</th><th _ngcontent-rng-c24=""></th></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/9081d0a452e84bca803e76e660f1ada1.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://honestcooking.com/indian-sliders-streetfood/">Indian Eggplant Sliders - Indian Street Food </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">1,773 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">3</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">43 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">91 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">216 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/ec595dd7de28377d29cf3421404d481b.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.saveur.com/article/Recipes/Chickpeas-Mango-Pickle">Zalata Amba (Chickpeas With Mango Pickle) </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">1,808 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">6</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">95 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">29 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">307 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/342a6b56fa55ec515bd18fa82617ffcb.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.bbcgoodfood.com/recipes/1158/">Mary Berry's Christmas Chutney </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">2,451 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">8</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">40 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">9 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">589 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/ee9b8c4ac88e7ac719866da0627874a8.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="https://www.epicurious.com/recipes/food/views/-pistachio-crusted-chicken-with-carrot-raita-51236030">Pistachio-Crusted Chicken with Carrot Raita </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">1,398 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">4</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">110 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">87 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">49 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/06a92aff9ee741097927acedd7c15c28.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.seriouseats.com/recipes/2011/08/tandoor-style-grilled-chickens-tandoori-cornish-hens-recipe.html">Tandoor-Style Grilled Chickens or Cornish Hens Recipe </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">3,837 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">6</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">310 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">255 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">70 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/51e8ac108caeed7095aff2619c0e93bb.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.delish.com/cooking/recipe-ideas/recipes/a22754/angel-lush-cake-recipe-kft0314/">Angel Lush Cake </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">1,014 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">10</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">6 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">15 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">222 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/da4161f565e88df670fb518bbdf95ae8.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.self.com/fooddiet/recipes/2004/09/anzacs">Anzacs </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">3,457 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">12</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">41 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">216 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">373 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/50ade2d8e898be072c34f67e24a65ccc.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://honestcooking.com/khandvi-recipe-indian-finger-food/">Khandvi - A healthy finger food from India </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">543 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">4</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">30 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">15 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">73 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/c86acf828525fc967b7726a6daafd86e.jpg"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="http://www.foodandwine.com/recipes/indian-spiced-sauerkraut">Indian-Spiced Sauerkraut </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">548 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">4</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">28 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">6 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">120 g</b></li><br _ngcontent-rng-c24=""></td></tr><tr _ngcontent-rng-c24="" class="food_card shadow-sm rounded"><td _ngcontent-rng-c24=""><img _ngcontent-rng-c24="" class="food_img shadow-sm rounded" src="./RecipeBook_files/cbc637b3c1c3e7c7647039b850d60f0b"></td><td _ngcontent-rng-c24=""><a _ngcontent-rng-c24="" target="_blank" class="link" href="https://smittenkitchen.com/2007/11/curried-lentils-and-sweet-potatoes/">Curried Lentils With Sweet Potatoes and Swiss Chard recipes </a></td><td _ngcontent-rng-c24="" class="energy"><b _ngcontent-rng-c24="">2,544 KCAL</b></td><td _ngcontent-rng-c24="" class="serving">9</td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Protein</li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Fat </li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24="">Carbs </li><br _ngcontent-rng-c24=""></td><td _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">108 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">57 g</b></li><br _ngcontent-rng-c24=""><li _ngcontent-rng-c24=""><b _ngcontent-rng-c24="">429 g</b></li><br _ngcontent-rng-c24=""></td></tr><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></div></table></div></div></app-chinese><!--container--></app-root>
+<script src="./RecipeBook_files/runtime.js.download" defer=""></script><script src="./RecipeBook_files/polyfills.js.download" defer=""></script><script src="./RecipeBook_files/styles.js.download" defer=""></script><script src="./RecipeBook_files/vendor.js.download" defer=""></script><script src="./RecipeBook_files/main.js.download" defer=""></script>
+
+</body></html>
