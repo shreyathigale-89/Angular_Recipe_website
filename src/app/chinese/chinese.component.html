@@ -1,0 +1,34 @@
+
+    <div class="container" id="food-category">
+        <table id="foodList">
+                <h4>Recipes <mat-icon color="dark">food_bank</mat-icon></h4>
+                
+                <tr class="shadow-sm rounded">
+                    <th>Image</th>
+                    <th>Food</th>
+                    <th>Energy</th>
+                    <th>Servings</th>
+                    <th>Nutrients</th>
+                    <th></th>
+                </tr>
+
+                <tr *ngFor="let d of FoodDisplay.hits" class="food_card shadow-sm rounded">
+                    <td><img src="{{d.recipe.image}}" class="food_img shadow-sm rounded"></td>
+                    <td><a href="{{d.recipe.url}}" target="_blank" class="link">{{d.recipe.label}} </a></td>
+                    <td class="energy"><b>{{d.recipe.calories | number:'1.0-0'}} KCAL</b></td>
+                    <td class="serving">{{d.recipe.yield}}</td>
+                    <td>
+                        <li>Protein</li><br>
+                        <li>Fat </li><br>
+                        <li>Carbs </li><br>
+                    </td>
+
+                    <td>
+                        <li><b>{{d.recipe.totalNutrients.PROCNT.quantity | number:'1.0-0'}} g</b></li><br>
+                        <li><b>{{d.recipe.totalNutrients.FAT.quantity | number:'1.0-0'}} g</b></li><br>
+                        <li><b>{{d.recipe.totalNutrients.CHOCDF.quantity | number:'1.0-0'}} g</b></li><br>
+                    </td>
+                </tr>
+        </table>
+    </div>
+

@@ -1,0 +1,21 @@
+
+
+<div class="d-flex" id="indian">
+  <h4>Indian Food Recipes</h4>
+    <div class="foodList" id="foodList">
+      <mat-card class="example-card" *ngFor="let d of FoodDisplay.hits">
+      
+        <img mat-card-image src="{{d.recipe.image}}">
+
+        <mat-card-title><a href="{{d.recipe.url}}" target="_blank" class="link">{{d.recipe.label}} </a>  </mat-card-title>
+
+        <mat-card-content>
+          <div class="grid-container text-center">
+            <div class="grid-item" id="grid-item1"><b>KCAL</b><br><br>{{d.recipe.calories | number:'1.0-0'}}</div>
+            <div class="grid-item" id="grid-item2"><b>Ingredients</b><br><br>{{d.recipe.ingredients.length}}</div>
+            <div class="grid-item" id="grid-item3"><b>Servings</b><br><br>{{d.recipe.yield}}</div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>

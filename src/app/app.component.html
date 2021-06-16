@@ -1,0 +1,159 @@
+<section id="Header">
+
+  <!--Sidebar-->
+
+  <mat-toolbar class="navbar shadow-sm rounded text-center">
+    <button mat-icon-button class="menu" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <h5 class="logo">Recipe-Book<mat-icon aria-hidden="false" aria-label="Example home icon">food_bank</mat-icon>
+    </h5>
+
+    <button class="login" mat-raised-button routerLink="user" (click)="loginform()">Login
+    </button>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container class="shadow-sm rounded">
+    <mat-sidenav mode="over" #sidenav="matSidenav">
+      <h5 class="logo">Recipe-Book<mat-icon aria-hidden="false" aria-label="Example home icon">food_bank</mat-icon>
+      </h5>
+      <hr><br>
+
+      <a routerLink="" class="items">HOME</a><br><br>
+      <a routerLink="user" class="items">PROFILE</a><br><br>
+      <a routerLink="about" class="items">ABOUT</a><br><br>
+      <hr><br>
+
+      <div class="social text-center">
+        <h6> Contact Us !</h6>
+        <div class="social-icon">
+          <mat-icon id="social-icon1">facebook</mat-icon>
+          <mat-icon>mail</mat-icon>
+        </div>
+      </div>
+
+      <!-- <button class="login2" mat-stroked-button routerLink="user" (click)="loginform()">Login
+      </button> -->
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="content">
+        <!--Header-->
+        <div class="Header text-center shadow-sm rounded">
+          <div class="search-bar">
+            <h6>Find your favorite...</h6><br>
+            <input type="search" #topic (keyup.enter)="update(topic.value)">
+          </div>
+        </div>
+
+
+        <!--Courosol-->
+
+        <carousel class="Category">
+
+          <div class="carousel-cell meal">
+            <img src="https://www.blueosa.com/wp-content/uploads/2020/07/Matar-Paneer-Peas-and-Cooked-Cottage-Cheese.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="Indian" class="text" (click)="hide()">Indian</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://i.ndtvimg.com/i/2017-08/noodles-620x350_620x350_41502436420.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="chinese" class="text" (click)="hide()">Chinese</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://static.toiimg.com/thumb/msid-81466821,width-1200,height-900,resizemode-4/.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="italian" class="text" (click)="hide()">Italian</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzc2VydHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
+            <div class="overlay">
+              <a routerLink="dessert" class="text" (click)="hide()">Dessert</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://img.fixthephoto.com/blog/images/gallery/news_preview_mob_image__preview_1376.jpg" alt=""><br>
+            <div class="overlay">
+              <a routerLink="drinks" class="text" (click)="hide()">Drinks</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tea-cup-bag-high-res-stock-photography-1570544677.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="tea" class="text" (click)="hide()">TeaTime</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/The-Best-Ever-Tomato-Soup_EXPS_THSO18_222724_D03_06_5b.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="soup" class="text" (click)="hide()">Soup</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="https://natashaskitchen.com/wp-content/uploads/2019/02/Greek-Salad.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="salad" class="text" (click)="hide()">Salad</a>
+            </div>
+          </div>
+
+          <div class="carousel-cell meal">
+            <img src="../assets/pancakes.jpg" alt="">
+            <div class="overlay">
+              <a routerLink="pancake" class="text" (click)="hide()">Pancakes</a>
+            </div>
+          </div>
+
+        </carousel>
+
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</section>
+
+
+<!--Search Bar Results-->
+
+<div class="Search-comp" id="search-comp" *ngIf="!error">
+  <div class="foodList" id="foodList">
+    <mat-card class="example-card" *ngFor="let d of FoodDisplay.hits">
+
+      <img mat-card-image src="{{d.recipe.image}}">
+
+      <mat-card-title><a href="{{d.recipe.url}}" target="_blank" class="link">{{d.recipe.label}} </a> </mat-card-title>
+
+      <mat-card-content>
+        <div class="grid-container text-center">
+          <div class="grid-item" id="grid-item1"><b>KCAL</b><br><br>{{d.recipe.calories | number:'1.0-0'}}</div>
+          <div class="grid-item" id="grid-item2"><b>Ingredients</b><br><br>{{d.recipe.ingredients.length}}</div>
+          <div class="grid-item" id="grid-item3"><b>Servings</b><br><br>{{d.recipe.yield}}</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!--For No result Found-->
+
+<div class="errormsg" id="errormsg" *ngIf="error">
+  <h2>No match found for the requested search!</h2>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <p class="text-center">Copyright 2020 Name template.All right reserved.</p>
+</footer>

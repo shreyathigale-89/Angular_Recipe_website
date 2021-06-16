@@ -1,0 +1,174 @@
+.container
+{
+   width: 100%;
+   text-align: center;
+   overflow-x: scroll; /* Scrollbar are always visible */
+   overflow-x: auto; 
+}
+
+.container >table
+{
+    left: 50%;
+    overflow-x: scroll; /* Scrollbar are always visible */
+    overflow-x: auto;   /* Scrollbar is displayed as it's needed */
+}
+
+.container h4{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: rgb(58, 56, 56);
+}
+
+.container h4 span
+{
+    color: rgb(245, 8, 8);
+    text-align: center;
+    font-size: 30px;
+}
+
+.food_img
+{
+    width:180px;
+    height: 180px;
+}
+
+.link 
+{
+    outline: none;
+    text-decoration: none;
+    color:rgb(145, 10, 10);
+    font-weight: 500;
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+.link:hover
+{
+    color: rgb(31, 29, 29);
+}
+
+
+#foodList td, #foodList th{
+    padding-right: 30px;
+}
+
+#foodList th{
+    background-color: #222;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+#foodList td
+{
+    padding-bottom: 20px;
+}
+
+#foodList td li
+{
+    list-style-type:none;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+ @media (max-width: 600px) {
+
+h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}    
+.foodList
+{
+   margin-left: 20px;
+}
+
+.food_img
+{
+    width:100px;
+    height: 100px;
+}
+
+.link 
+{
+    font-size: 15px;
+    padding-right: 15px;
+    font-weight: 450;
+}
+
+#foodList th
+{
+    font-size: 15px;
+}
+
+}
+
+/*
+@media only screen and (max-width: 768px) {
+
+    h4{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 23px;
+    }    
+    .foodList
+    {
+       margin-left: 12px;
+    }
+    
+    .food_img
+    {
+        width:130px;
+        height: 130px;
+    }
+    
+    .link 
+    {
+        font-size: 18px;
+        padding-right: 18px;
+        font-weight: 500;
+    }
+    
+    #foodList th
+    {
+        font-size: 18px;
+    }
+
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+    h4{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 25px;
+    }    
+    .foodList
+    {
+       margin-left: 16px;
+    }
+    
+    .food_img
+    {
+        width:160px;
+        height: 160px;
+    }
+    
+    .link 
+    {
+        font-size: 20px;
+        padding-right: 20px;
+        font-weight: 500;
+    }
+    
+    #foodList th
+    {
+        font-size: 21px;
+    }
+
+
+} */

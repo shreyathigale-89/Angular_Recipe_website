@@ -1,0 +1,47 @@
+mat-card {
+  width: 600px;
+  height: auto;
+padding: 40px;
+  text-align: center;
+  position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.header h2
+{
+  text-align: center;
+  color: red;
+}
+
+ .example-full-width {
+  width: 100%;
+  padding-bottom: 20px;
+} 
+
+mat-label
+{
+    font-size: 15px;
+}
+
+
+
+@media (max-width:600px){
+  mat-card {
+    width: 300px;
+  padding: 20px;
+  }
+
+   .example-full-width {
+    padding-bottom: 10px;
+  } 
+  
+  mat-label
+  {
+      font-size: 10px;
+  }
+}
+
+

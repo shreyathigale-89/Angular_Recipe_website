@@ -1,0 +1,346 @@
+*{
+    transition: all ease 0.5s;
+    margin: 0 auto;
+}
+
+mat-toolbar{
+    
+    height: 70px; 
+    background: #fff;
+}  
+
+mat-toolbar .menu
+{
+    color: red;
+    font-size: 40px;
+    font-weight:700;
+    
+}
+
+mat-toolbar .login
+{
+    font-size: 20px;
+    padding: 8px 18px;
+}
+
+.logo
+{
+    color: rgb(245, 8, 8);
+    font-weight: 600;
+    font-size: 40px;
+    font-family:'Abril Fatface', sans-serif;
+    margin: 0 auto;
+}
+
+mat-sidenav .logo
+{
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+mat-sidenav
+{
+    margin: 16px;
+    width: 300px;
+    border-right: none;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(241, 52, 52);
+}
+
+mat-sidenav .items
+{
+   font-size: 20px;
+   font-family: 'Archivo', sans-serif;
+   font-weight: 550;
+   color: #fff;
+   margin: 20px;
+   text-align: center;
+   text-decoration: none;
+   padding: 20px;
+}
+
+mat-sidenav .items:hover
+{
+    color: #222;
+}
+
+.social h6
+{
+    color: #fff;
+    font-size: 18px;
+}
+
+hr{
+    color: #fff;
+}
+.social 
+{
+    color: #fff;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.social-icon > mat-icon
+{
+    padding: 30px;
+    font-size: 35px;
+}
+#social-icon1
+{
+    padding-left: 5px;
+}
+
+.login2
+{
+    padding:3px 50px;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    border-color: #fff;
+}
+.content
+{
+   height: auto;
+    justify-content: center;
+    align-items: center;
+   
+}
+mat-sidenav-container{
+    height: 90vh;
+    width: 100vw;
+}
+
+.Header
+{
+   background-image: url("../assets/food7.jpg");
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.search-bar
+{
+    padding-top: 150px;
+}
+
+input{
+    padding: 20px 230px;
+    border: none;
+    background-color: white;
+    opacity: 0.9;
+    outline: none;
+}
+.search-bar h6
+{
+    font-family: 'Pattaya';
+    font-size: 500;
+    font-size: 48px;
+    color: rgb(36, 34, 34);
+}
+
+h4{
+    text-align: center;
+    padding-top: 16px;
+    font-size: 33px;
+    color: rgb(58, 56, 56);
+}
+
+h4 span
+{
+    color: rgb(245, 8, 8);
+    text-align: center;
+    padding-top: 16px;
+    font-size: 33px;
+}
+
+
+/*Caurosol*/
+
+.Category
+{
+    margin: 35px;
+    margin-bottom: 0%;
+    justify-content: center;
+}
+  .meal
+  {
+   height: 130px!important;
+   width: 130px!important;
+   position: relative;
+  }
+
+  .meal img
+  {
+    position: relative;
+  border-radius: 50%;
+  object-fit: cover!important;
+  }
+
+  .meal img:hover 
+  {
+      opacity: 0.5;
+
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(221, 103, 103, 0.5);
+  }
+
+  .text {
+    color: #222;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .meal:hover .overlay {
+    opacity: 1;
+  }
+
+
+
+/*Searched  Food*/
+
+.foodList
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2% 6%;
+}
+
+.foodList > mat-card {
+    height: 420px;
+    transition: 0.4s all ease; 
+    flex: 1 1 300px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 0%;
+    padding-right: 18px;
+}
+
+mat-card img{
+    height: 250px;
+    width: 100%;
+   padding-top: 12px;
+}
+
+.link 
+{
+    outline: none;
+    text-decoration: none;
+    color:rgb(230, 30, 30);
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.link:hover
+{
+    color: rgb(56, 52, 52);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:20px 18px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+
+
+
+  /*Media Queries*/
+
+  /**/
+  @media (max-width:600px)
+  {
+      .Header
+      {
+        height: 300px;
+        width: 100%;
+      }
+
+.navbar
+{
+    height: 70px; 
+}
+
+mat-toolbar .login
+{
+    font-size: 14px;
+    padding: 4px 12px;
+}
+
+
+mat-sidenav-container{
+    height: 70vh;
+    width: 100%;
+}
+.logo
+{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.search-bar
+{
+    padding-top: 50px;
+}
+
+input{
+    padding: 10px 55px;
+}
+
+.search-bar h6{
+    font-size: 450;
+    font-size: 20px;
+}
+
+
+.Category
+{
+    margin: 10px;
+    justify-content: space-around;
+}
+  .meal
+  {
+   height: 90px!important;
+   width: 90px!important;
+  }
+
+  .text
+  {
+    font-size: 14px;
+  }
+}
